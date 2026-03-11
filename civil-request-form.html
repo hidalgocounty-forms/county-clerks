@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hidalgo County Civil Case Request Form</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #111111;
+  }
+
+  .container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .county-seal {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  h1, h2, h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    margin-top: 0;
+    font-weight: bold;
+  }
+
+  .form-title {
+    text-align: center;
+    margin: 20px 0 16px 0;
+    text-decoration: underline;
+  }
+
+  .notice {
+    background: #f3f4f6;
+    border-left: 4px solid #444;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+  }
+
+  fieldset {
+    border: 1px solid #666;
+    padding: 16px;
+    margin: 0 0 20px 0;
+  }
+
+  legend {
+    font-weight: bold;
+    padding: 0 8px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+  }
+
+  .full { grid-column: span 12; }
+  .half { grid-column: span 6; }
+  .third { grid-column: span 4; }
+  .quarter { grid-column: span 3; }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .hint {
+    display: block;
+    font-weight: normal;
+    font-size: 0.95rem;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background: #fff;
+    color: #111;
+  }
+
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  .radio-group,
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .radio-group label,
+  .checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0;
+  }
+
+  .radio-group input,
+  .checkbox-group input {
+    width: auto;
+  }
+
+  .office-use {
+    border: 2px solid #666;
+    padding: 16px;
+    margin-top: 24px;
+  }
+
+  .form-actions {
+    margin-top: 20px;
+  }
+
+  .print-btn {
+    background: #005ea2;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 700px) {
+    .half, .third, .quarter, .full {
+      grid-column: span 12;
+    }
+
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .county-seal {
+      max-width: 120px;
+    }
+  }
+
+  @media print {
+    .print-btn {
+      display: none;
+    }
+
+    input, textarea, select {
+      border: 1px solid #000;
+    }
+
+    .county-seal {
+      max-width: 110px;
+    }
+
+    body {
+      background: #fff;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <img
+        src="https://www.hidalgocounty.us/ImageRepository/Document?documentID=72279"
+        alt="Seal of Hidalgo County, Texas."
+        class="county-seal"
+      />
+
+      <div>
+        <h1 id="form-title">County of Hidalgo</h1>
+        <p class="subtitle">Arturo Guajardo, Jr. - County Clerk</p>
+      </div>
+    </header>
+
+    <h2 class="form-title">Civil Case Request Form</h2>
+
+    <div class="notice">
+      <p><strong>Accessibility note:</strong> Complete the form fields below. All fields are keyboard accessible and labeled for assistive technology.</p>
+    </div>
+
+    <form aria-labelledby="form-title">
+      <fieldset>
+        <legend>Case Information</legend>
+
+        <div class="grid">
+          <div class="half">
+            <label for="request-date">Date</label>
+            <input id="request-date" name="request-date" type="date">
+          </div>
+
+          <div class="half">
+            <label for="plaintiff-name">Plaintiff's Name</label>
+            <input id="plaintiff-name" name="plaintiff-name" type="text" autocomplete="name">
+          </div>
+
+          <div class="half">
+            <span id="request-type-label"><strong>Request Type</strong></span>
+            <div class="radio-group" role="radiogroup" aria-labelledby="request-type-label">
+              <label><input type="radio" name="request-type" value="civil-cause"> Civil Cause</label>
+              <label><input type="radio" name="request-type" value="record-search"> Record Search</label>
+            </div>
+          </div>
+
+          <div class="half">
+            <label for="defendant-name">Defendant's Name</label>
+            <input id="defendant-name" name="defendant-name" type="text" autocomplete="name">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Documents Requested</legend>
+
+        <div class="checkbox-group" aria-label="Documents requested">
+          <label><input type="checkbox" name="documents-requested" value="petition"> Petition</label>
+          <label><input type="checkbox" name="documents-requested" value="other"> Other</label>
+          <label><input type="checkbox" name="documents-requested" value="judgment"> Judgment</label>
+          <label><input type="checkbox" name="documents-requested" value="dismissal"> Dismissal</label>
+        </div>
+
+        <div class="grid" style="margin-top:16px;">
+          <div class="half">
+            <label for="other-document">If Other, Please Specify</label>
+            <input id="other-document" name="other-document" type="text">
+          </div>
+
+          <div class="half">
+            <span id="certification-label"><strong>Certification</strong></span>
+            <div class="radio-group" role="radiogroup" aria-labelledby="certification-label">
+              <label><input type="radio" name="certification" value="requested"> Certification ($5.00 per document)</label>
+              <label><input type="radio" name="certification" value="not-requested"> No Certification Requested</label>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top:16px;">
+          <strong>Fees:</strong> $5.00 Search Fee, ($1.00 per page)
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Requester Information</legend>
+
+        <div class="grid">
+          <div class="half">
+            <label for="requester-name">Requester's Name</label>
+            <input id="requester-name" name="requester-name" type="text" autocomplete="name">
+          </div>
+
+          <div class="half">
+            <label for="phone-number">Phone Number</label>
+            <input id="phone-number" name="phone-number" type="tel" autocomplete="tel">
+          </div>
+
+          <div class="half">
+            <label for="email-address">Email Address</label>
+            <input id="email-address" name="email-address" type="email" autocomplete="email">
+          </div>
+
+          <div class="half">
+            <label for="mailing-address">Mailing Address</label>
+            <textarea id="mailing-address" name="mailing-address"></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Delivery Method</legend>
+
+        <div class="radio-group" aria-label="Delivery method">
+          <label><input type="radio" name="delivery-method" value="pickup"> Pickup</label>
+          <label><input type="radio" name="delivery-method" value="mail"> Mail</label>
+          <label><input type="radio" name="delivery-method" value="email"> Email</label>
+        </div>
+
+        <p style="margin-top:16px;">
+          Once your request is received by our office, we will contact you regarding your preferred payment using the contact information you provided above.
+        </p>
+        <p>Thank you.</p>
+      </fieldset>
+
+      <section class="office-use" aria-labelledby="office-use-title">
+        <h2 id="office-use-title">For County Clerk Use Only</h2>
+
+        <div class="grid">
+          <div class="quarter">
+            <label for="copy-total">Total Amount of Copies ($1.00 p/page)</label>
+            <input id="copy-total" name="copy-total" type="text" autocomplete="off">
+          </div>
+
+          <div class="quarter">
+            <label for="certified-copies"># of Certified Copies ($5.00 p/document)</label>
+            <input id="certified-copies" name="certified-copies" type="text" autocomplete="off">
+          </div>
+
+          <div class="quarter">
+            <label for="search-fee">Search ($5.00 p/search)</label>
+            <input id="search-fee" name="search-fee" type="text" autocomplete="off">
+          </div>
+
+          <div class="quarter">
+            <label for="total-due">Total Due</label>
+            <input id="total-due" name="total-due" type="text" autocomplete="off">
+          </div>
+
+          <div class="half">
+            <label for="receipt-number">Receipt #</label>
+            <input id="receipt-number" name="receipt-number" type="text" autocomplete="off">
+          </div>
+
+          <div class="half">
+            <label for="clerk-processing">Clerk Processing</label>
+            <input id="clerk-processing" name="clerk-processing" type="text" autocomplete="off">
+          </div>
+        </div>
+      </section>
+
+      <div class="form-actions">
+        <button type="button" onclick="window.print()" class="print-btn">
+          Print or Save Completed Form as PDF
+        </button>
+      </div>
+    </form>
+
+    <footer class="footer">
+      <p>
+        Hidalgo County Clerk's Office P.O. Box 58 / 100 N. Closner, Edinburg, Texas 78540 956-318-2100
+      </p>
+      <p>
+        <a href="https://www.hidalgocountyclerk.us">www.hidalgocountyclerk.us</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
