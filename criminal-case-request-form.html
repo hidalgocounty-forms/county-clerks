@@ -1,0 +1,393 @@
+<section class="hc-form-wrap" aria-labelledby="criminal-case-request-title">
+  <style>
+    .hc-form-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      font-family: Arial, sans-serif;
+      color: #111;
+      background: #fff;
+    }
+
+    .hc-form-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 3px solid #222;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hc-form-seal img {
+      max-width: 90px;
+      height: auto;
+    }
+
+    .hc-form-heading p {
+      margin: 0.25rem 0;
+    }
+
+    .hc-form-heading .county-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hc-form-heading .office-name {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .hc-form-heading .form-name {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+
+    .hc-required-note {
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+
+    fieldset {
+      border: 2px solid #222;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    legend {
+      font-weight: 700;
+      padding: 0 0.5rem;
+    }
+
+    .hc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .hc-grid-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .hc-field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hc-field label {
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .hc-field input,
+    .hc-field textarea,
+    .hc-field select {
+      padding: 0.65rem;
+      border: 1px solid #444;
+      border-radius: 4px;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .hc-checkbox-group,
+    .hc-radio-group {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(220px, 1fr));
+      gap: 0.75rem 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .hc-check-item,
+    .hc-radio-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .hc-check-item input,
+    .hc-radio-item input {
+      margin-top: 0.2rem;
+    }
+
+    .hc-help-text {
+      font-size: 0.95rem;
+      margin-top: 0.4rem;
+    }
+
+    .hc-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .hc-button {
+      appearance: none;
+      border: 2px solid #0b3a6f;
+      background: #0b3a6f;
+      color: #fff;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .hc-button-secondary {
+      background: #fff;
+      color: #0b3a6f;
+    }
+
+    .hc-button:hover,
+    .hc-button:focus {
+      filter: brightness(0.95);
+    }
+
+    .hc-button:focus,
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: 3px solid #1a73e8;
+      outline-offset: 2px;
+    }
+
+    .hc-footer-note {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .hc-office-info {
+      margin-top: 2rem;
+      border-top: 2px solid #222;
+      padding-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 700px) {
+      .hc-grid,
+      .hc-checkbox-group,
+      .hc-radio-group {
+        grid-template-columns: 1fr;
+      }
+
+      .hc-form-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media print {
+      .hc-actions {
+        display: none;
+      }
+
+      .hc-form-wrap {
+        max-width: 100%;
+        padding: 0;
+      }
+    }
+  </style>
+
+  <div class="hc-form-header">
+    <div class="hc-form-seal">
+      <img
+        src="https://www.hidalgocounty.us/ImageRepository/Document?documentID=72279"
+        alt="Seal of Hidalgo County"
+      />
+    </div>
+    <div class="hc-form-heading">
+      <p class="county-name">County of Hidalgo</p>
+      <p class="office-name">Arturo Guajardo, Jr. - County Clerk</p>
+      <h1 id="criminal-case-request-title" class="form-name">
+        Criminal Case Request Form (Agency)
+      </h1>
+    </div>
+  </div>
+
+  <p class="hc-required-note">
+    Use this form to request criminal case documents from the Hidalgo County Clerk’s Office.
+    Fields marked with <strong>*</strong> are required.
+  </p>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Case Information</legend>
+
+      <div class="hc-grid">
+        <div class="hc-field">
+          <label for="request-date">Date <span aria-hidden="true">*</span></label>
+          <input type="date" id="request-date" name="request_date" required />
+        </div>
+
+        <div class="hc-field">
+          <label for="criminal-cause">Criminal Cause <span aria-hidden="true">*</span></label>
+          <input type="text" id="criminal-cause" name="criminal_cause" required />
+        </div>
+
+        <div class="hc-field">
+          <label for="defendant-name">Defendant’s Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="defendant-name" name="defendant_name" required />
+        </div>
+
+        <div class="hc-field">
+          <label for="defendant-dob">Defendant’s Date of Birth</label>
+          <input type="date" id="defendant-dob" name="defendant_dob" />
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Documents Requested</legend>
+
+      <div class="hc-checkbox-group">
+        <div class="hc-check-item">
+          <input type="checkbox" id="doc-complaint" name="documents_requested" value="Complaint" />
+          <label for="doc-complaint">Complaint</label>
+        </div>
+
+        <div class="hc-check-item">
+          <input type="checkbox" id="doc-judgment" name="documents_requested" value="Judgment" />
+          <label for="doc-judgment">Judgment</label>
+        </div>
+
+        <div class="hc-check-item">
+          <input type="checkbox" id="doc-dismissal" name="documents_requested" value="Dismissal" />
+          <label for="doc-dismissal">Dismissal</label>
+        </div>
+
+        <div class="hc-check-item">
+          <input
+            type="checkbox"
+            id="doc-discharge-probation"
+            name="documents_requested"
+            value="Discharge of Probation"
+          />
+          <label for="doc-discharge-probation">Discharge of Probation</label>
+        </div>
+      </div>
+
+      <div class="hc-field" style="margin-top: 1rem;">
+        <label for="doc-other">Other requested document</label>
+        <input type="text" id="doc-other" name="document_other" />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Certification</legend>
+
+      <div class="hc-radio-group">
+        <div class="hc-radio-item">
+          <input
+            type="radio"
+            id="certification-yes"
+            name="certification_requested"
+            value="Certification requested"
+          />
+          <label for="certification-yes">Certification</label>
+        </div>
+
+        <div class="hc-radio-item">
+          <input
+            type="radio"
+            id="certification-no"
+            name="certification_requested"
+            value="No certification requested"
+          />
+          <label for="certification-no">No certification requested</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Requester Information</legend>
+
+      <div class="hc-grid-1">
+        <div class="hc-field">
+          <label for="agency-name">Agency Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="agency-name" name="agency_name" required />
+        </div>
+
+        <div class="hc-field">
+          <label for="requester-name">Requester’s Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="requester-name" name="requester_name" required />
+        </div>
+
+        <div class="hc-grid">
+          <div class="hc-field">
+            <label for="phone-number">Phone Number <span aria-hidden="true">*</span></label>
+            <input type="tel" id="phone-number" name="phone_number" required />
+          </div>
+
+          <div class="hc-field">
+            <label for="email-address">Email Address</label>
+            <input type="email" id="email-address" name="email_address" />
+          </div>
+        </div>
+
+        <div class="hc-field">
+          <label for="mailing-address">Mailing Address <span aria-hidden="true">*</span></label>
+          <textarea id="mailing-address" name="mailing_address" rows="3" required></textarea>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Delivery Method</legend>
+
+      <div class="hc-radio-group">
+        <div class="hc-radio-item">
+          <input type="radio" id="delivery-pickup" name="delivery_method" value="Pick-up" />
+          <label for="delivery-pickup">Pick-up</label>
+        </div>
+
+        <div class="hc-radio-item">
+          <input type="radio" id="delivery-mail" name="delivery_method" value="Mail" />
+          <label for="delivery-mail">Mail</label>
+        </div>
+
+        <div class="hc-radio-item">
+          <input type="radio" id="delivery-email" name="delivery_method" value="Email" />
+          <label for="delivery-email">Email</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <p class="hc-footer-note">
+      Once your request is received by our office, we will contact you regarding your preferred
+      payment using the contact information you provided above. Thank you.
+    </p>
+
+    <div class="hc-actions">
+      <button type="button" class="hc-button" onclick="window.print()">
+        Print / Save as PDF
+      </button>
+    </div>
+  </form>
+
+  <div class="hc-office-info">
+    <p>
+      <strong>Hidalgo County Clerk’s Office</strong><br />
+      P.O. Box 58 / 100 N. Closner, Edinburg, Texas 78540<br />
+      Phone: <a href="tel:9563182100">956-318-2100</a><br />
+      Website:
+      <a href="https://www.hidalgocountyclerk.us">www.hidalgocountyclerk.us</a>
+    </p>
+  </div>
+</section>
